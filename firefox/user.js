@@ -457,7 +457,7 @@ user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.telemetry.coverage.opt-out", true);
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 user_pref("privacy.resistFingerprinting.letterboxing", true); // Used to help resist fingerprinting… set to `false` to disable letterboxing
-user_pref("privacy.partition.bloburl_per_agent_cluster", true);
+user_pref("privacy.partition.bloburl_per_agent_cluster", true); // Separates blob URLs into different storage partitions based on agent clusters to enhance privacy
 user_pref("network.cookie.sameSite.laxByDefault", true);
 user_pref("network.cookie.sameSite.noneRequiresSecure", true);
 user_pref("network.cookie.sameSite.schemeful", true);
