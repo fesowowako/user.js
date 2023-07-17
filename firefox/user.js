@@ -188,7 +188,7 @@ user_pref("captivedetect.canonicalURL", "");
 user_pref("network.captive-portal-service.enabled", false);
 // Canvas fingerprint protection
 // This also enables useragent spoofing
-user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting", true); // Used to help resist fingerprinting but breaks dark mode and screenshots (among other features)… set to `true` for increased privacy
 user_pref("webgl.disabled", true);
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);
 user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
@@ -219,7 +219,7 @@ user_pref("media.eme.apiVisible", false);
 user_pref("identity.fxaccounts.enabled", false);
 
 // WebRTC
-user_pref("media.peerconnection.enabled", false);
+user_pref("media.peerconnection.enabled", false); // Used to disable WebRTC (mitigating WebRTC leaks)… set to `true` to enable WebRTC
 // Don't reveal your internal IP when WebRTC is enabled
 user_pref("media.peerconnection.ice.no_host", true);
 user_pref("media.peerconnection.ice.default_address_only", true);
@@ -409,13 +409,13 @@ user_pref("dom.security.https_only_mode_ever_enabled", true);
 user_pref("dom.security.https_only_mode", true);
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
-user_pref("network.cookie.lifetimePolicy", 2);
+user_pref("network.cookie.lifetimePolicy", 2); // Used to delete cookies when Firefox is closed… set to `0` to enable default cookie persistence
 user_pref("network.trr.custom_uri", "https://doh.mullvad.net/dns-query");
-user_pref("network.trr.mode", 3);
+user_pref("network.trr.mode", 3); // Used to enable Mullvad DNS over HTTPS… set to `5` to disable Mullvad DNS over HTTPS
 user_pref("network.trr.uri", "https://doh.mullvad.net/dns-query");
 user_pref("places.history.enabled", false);
 user_pref("privacy.history.custom", true);
-user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+user_pref("privacy.sanitize.sanitizeOnShutdown", true); // Used to delete cookies and site data when Firefox is closed… set to `false` to enable cookie and site data persistence
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("signon.management.page.breach-alerts.enabled", false);
 user_pref("signon.rememberSignons", false);
@@ -456,7 +456,7 @@ user_pref("toolkit.coverage.endpoint.base", "");
 user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.telemetry.coverage.opt-out", true);
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
-user_pref("privacy.resistFingerprinting.letterboxing", true);
+user_pref("privacy.resistFingerprinting.letterboxing", true); // Used to help resist fingerprinting… set to `false` to disable letterboxing
 user_pref("privacy.partition.bloburl_per_agent_cluster", true);
 user_pref("network.cookie.sameSite.laxByDefault", true);
 user_pref("network.cookie.sameSite.noneRequiresSecure", true);
